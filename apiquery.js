@@ -6,7 +6,7 @@ button.addEventListener("click", function(clicky) {
         data: "api-key=test",
         dataType: "json",
         success: function(json) {
-            $( "h1" ).html("There are " + json.response.pages + " pages at the Guardian currently!");
+            $( "p" ).html("There are " + json.response.pages + " pages at the Guardian currently!");
         },
         error: function(xhr, status, errorThrown) {
             alert("Sorry, there was a problem!");
