@@ -2,7 +2,7 @@
 
 ###Make an API call!
 
-This is one of a series of 3 newbie friendly projects for 24 Pull Requests: http://24pullrequests.com/.
+This is one of a series of 3 beginner friendly projects for 24 Pull Requests: http://24pullrequests.com/.
 
 We want you to help us build a site that gathers information from some public APIs. We think the Guardian one is perfect for beginners but check out Twitter if you want something else: http://explorer.content.guardianapis.com/?api-key=test
 
