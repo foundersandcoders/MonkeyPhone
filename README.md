@@ -28,5 +28,5 @@ The Founders and Coders crew are all more than happy to offer any help, advice, 
 
 ###Check out our other projects:
 
-* Build a blogging platform:
+* Build a blogging platform: https://github.com/foundersandcoders/we-love-to-learn
 * Build an HTML 5 game: https://github.com/foundersandcoders/want-to-canvas
