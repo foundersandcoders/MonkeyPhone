@@ -29,4 +29,4 @@ The Founders and Coders crew are all more than happy to offer any help, advice, 
 ###Check out our other projects:
 
 * Build a blogging platform:
-* Build an HTML 5 game:
+* Build an HTML 5 game: https://github.com/foundersandcoders/want-to-canvas
