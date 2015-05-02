@@ -1,5 +1,7 @@
 #Monkey Phone
 
+[![Join the chat at https://gitter.im/codingforeveryone/MonkeyPhone](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/codingforeveryone/MonkeyPhone?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ###Make an API call!
 
 This is one of a series of 3 beginner friendly projects for 24 Pull Requests: http://24pullrequests.com/.
