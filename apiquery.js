@@ -3,10 +3,10 @@ button.addEventListener("click", function(clicky) {
     $.ajax({
         url: "http://content.guardianapis.com/search",
         type: "GET",
-        data: "api-key=test",
+        data: "show-editors-picks=true&show-fields=headline&api-key=test",
         dataType: "json",
         success: function(json) {
-            $( "p" ).html("There are " + json.response.pages + " pages at the Guardian currently!");
+            $( "p" ).html("The current headline is: " + json.response.results[0].webTitle);
         },
         error: function(xhr, status, errorThrown) {
             alert("Sorry, there was a problem!");
@@ -17,3 +17,5 @@ button.addEventListener("click", function(clicky) {
     });
 }, false);
 
+// Hey all, I thought it would be fun to make a project that recommended a record
+// based on the current headline, linking in with the Discogs API
