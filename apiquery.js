@@ -17,7 +17,7 @@ headlineButton.addEventListener("click", function(clicky) {
         data: "show-editors-picks=true&show-fields=headline&api-key=test",
         dataType: "json",
         success: function(json) {
-            headlineText = json.response.results[0].webTitle;
+            headlineText += json.response.results[0].webTitle;
             firstWord += headlineText.split(" ")[0];
             $( "#headline" ).html("The current headline is: " + headlineText);
             $( "#firstWord" ).html("The first word is: " + firstWord);
@@ -39,7 +39,7 @@ recordButton.addEventListener("click", function(clicky) {
         data: "q=" + firstWord;
         dataType: "json";
         success: function(json) {
-            resultRecord = json.response.results[0].title;
+            resultRecord += json.response.results[0].title;
             $( "#record").html("You should buy: " + resultRecord);
         },
         error: function(xhr, status, errorThrown) {
