@@ -36,8 +36,8 @@ recordButton.addEventListener("click", function(clicky) {
     $.ajax({
         url: "https://api.discogs.com/database/search",
         type: "GET",
-        data: "q=" + firstWord;
-        dataType: "json";
+        data: "q=" + firstWord,
+        dataType: "json",
         success: function(json) {
             resultRecord += json.response.results[0].title;
             $( "#record").html("You should buy: " + resultRecord);
