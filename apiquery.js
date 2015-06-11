@@ -1,7 +1,7 @@
 // Hey, I thought it would be fun to make a project that recommended a record
 // based on the current headline, linking in with the Discogs API
 
-var headlineButton = document.getElementByID("#headline");
+var headlineButton = document.getElementById("#headline");
 headlineButton.addEventListener("click", function(clicky) {
     $.ajax({
         url: "http://content.guardianapis.com/search",
