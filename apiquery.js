@@ -1,4 +1,4 @@
-var button = document.querySelector("button");
+var button = document.getElementByID("#headline");
 button.addEventListener("click", function(clicky) {
     $.ajax({
         url: "http://content.guardianapis.com/search",
