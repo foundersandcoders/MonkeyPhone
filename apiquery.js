@@ -1,5 +1,8 @@
-var button = document.getElementByID("#headline");
-button.addEventListener("click", function(clicky) {
+// Hey, I thought it would be fun to make a project that recommended a record
+// based on the current headline, linking in with the Discogs API
+
+var headlineButton = document.getElementByID("#headline");
+headlineButton.addEventListener("click", function(clicky) {
     $.ajax({
         url: "http://content.guardianapis.com/search",
         type: "GET",
@@ -16,6 +19,3 @@ button.addEventListener("click", function(clicky) {
         },
     });
 }, false);
-
-// Hey all, I thought it would be fun to make a project that recommended a record
-// based on the current headline, linking in with the Discogs API
