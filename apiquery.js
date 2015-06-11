@@ -2,6 +2,8 @@
 // based on the current headline, linking in with the Discogs API
 
 var headlineButton = document.getElementById("headline-button");
+var headlineText = "";
+var firstWord = "";
 headlineButton.addEventListener("click", function(clicky) {
     $.ajax({
         url: "http://content.guardianapis.com/search",
@@ -9,7 +11,10 @@ headlineButton.addEventListener("click", function(clicky) {
         data: "show-editors-picks=true&show-fields=headline&api-key=test",
         dataType: "json",
         success: function(json) {
-            $( "#headline" ).html("The current headline is: " + json.response.results[0].webTitle);
+            headlineText = json.response.results[0].webTitle;
+            firstWord += headlineText.split(" ")[0];
+            $( "#headline" ).html("The current headline is: " + headlineText);
+            $( "#firstWord" ).html("The first word is: " + firstWord);
         },
         error: function(xhr, status, errorThrown) {
             alert("Sorry, there was a problem!");
@@ -19,3 +24,8 @@ headlineButton.addEventListener("click", function(clicky) {
         },
     });
 }, false);
+
+//var recordButton = document.getElementById("record-button");
+//recordButton.addEventListener("click", function(clicky) {
+//    $.ajax({
+        
