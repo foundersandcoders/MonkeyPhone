@@ -31,15 +31,12 @@ headlineButton.addEventListener("click", function(clicky) {
     });
 }, false);
 
-var sKey = 'qmCvXianinPlRUtHulBD';
-var sSecret = 'THJwLdwqivKetxWTpHMecjebOMPpyysT';
-
 var recordButton = document.getElementById("record-button");
 recordButton.addEventListener("click", function(clicky) {
     $.ajax({
         url: "https://api.discogs.com/database/search",
         type: "GET",
-        data: "q=" + firstWord + '&key=' + sKey + '&secret=' + sSecret,
+        data: "q=" + firstWord + '&key=qmCvXianinPlRUtHulBD&secret=THJwLdwqivKetxWTpHMecjebOMPpyysT',
         dataType: "json",
         success: function(json) {
             alert(json.response);
