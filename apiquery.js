@@ -34,9 +34,10 @@ headlineButton.addEventListener("click", function(clicky) {
 var recordButton = document.getElementById("record-button");
 recordButton.addEventListener("click", function(clicky) {
     $.ajax({
+        headers: {key: '&key=qmCvXianinPlRUtHulBD', secret: 'THJwLdwqivKetxWTpHMecjebOMPpyysT'},
         url: "https://api.discogs.com/database/search",
         type: "GET",
-        data: "type=release&artist=" + firstWord + '&key=qmCvXianinPlRUtHulBD&secret=THJwLdwqivKetxWTpHMecjebOMPpyysT',
+        data: "type=release&artist=" + firstWord,
         dataType: "json",
         success: function(json) {
             alert(json.response);
