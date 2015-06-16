@@ -36,7 +36,7 @@ recordButton.addEventListener("click", function(clicky) {
     $.ajax({
         url: "https://api.discogs.com/database/search",
         type: "GET",
-        data: "q=" + firstWord + '&key=qmCvXianinPlRUtHulBD&secret=THJwLdwqivKetxWTpHMecjebOMPpyysT',
+        data: "type=release&artist=" + firstWord,
         dataType: "json",
         success: function(json) {
             alert(json.response);
