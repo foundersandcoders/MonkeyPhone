@@ -42,6 +42,7 @@ recordButton.addEventListener("click", function(clicky) {
         data: "q=" + firstWord + '&key=' + sKey + '&secret=' + sSecret,
         dataType: "json",
         success: function(json) {
+            alert(json.response);
             resultRecord += json.response.results[0].title;
             $( "#record").html("You should buy: " + resultRecord);
         },
