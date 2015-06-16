@@ -34,13 +34,12 @@ headlineButton.addEventListener("click", function(clicky) {
 var recordButton = document.getElementById("record-button");
 recordButton.addEventListener("click", function(clicky) {
     $.ajax({
-        headers: {key: '&key=qmCvXianinPlRUtHulBD', secret: 'THJwLdwqivKetxWTpHMecjebOMPpyysT'},
+        headers: {key: 'qmCvXianinPlRUtHulBD', secret: 'THJwLdwqivKetxWTpHMecjebOMPpyysT'},
         url: "https://api.discogs.com/database/search",
         type: "GET",
         data: "type=release&artist=" + firstWord,
         dataType: "json",
         success: function(json) {
-            alert(json.response);
             resultRecord += json.response.results[0].title;
             $( "#record").html("You should buy: " + resultRecord);
         },
