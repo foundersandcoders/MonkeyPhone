@@ -1,19 +1,48 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>An API request</title>
-        <link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Merriweather:900' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="main.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet"> 
+        <style type="text/css">
+          h1 {font-size: 15px;}
+        </style>
+        
     </head>
     <body>
-        <h1>How do I API?</h1>
-        <p id="headline">What's the current Guardian main headline?</p>
-        <button id="headline-button">Click Me!</button>
-        <p id="firstWord"></p>
-        <p id="record">So what record does that mean I should get?</p>
-        <button id="record-button">Let's find out!</button>
-        <script src="apiquery.js"></script>
+        <div class="container">
+            <div class="page-header">
+              <h1>Guardian News <small>Technology</small></h1>
+            </div>
+            <div class="jumbotron">
+              <h1 id="latest-headline"></h1>
+              <p id="latest-snippet"></p>
+              <p><a class="btn btn-primary btn-lg" href="#" role="button">Read more</a></p>
+            </div>
+            <div class="row">
+              <div class="content">
+                <div class="col-md-9 col-sm-12">
+                  <div class="news">
+                    <!-- News items here -->
+                  </div>
+                </div>
+                <div class="right-column">
+                  <div class="hidden-xs">
+                    <div class="col-md-3">
+                      <img src="img/right-column.jpg" />
+                    </div>
+                </div>
+                </div>
+              </div>
+            </div>
+            <div id="footer">
+              <p>Guardian News - Technology</p>
+            </div>
+        </div>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="js/apiquery.js"></script>
     </body>
 </html>
