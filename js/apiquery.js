@@ -1,4 +1,29 @@
 $(document).ready(function() {
+    var defaultMain = $('body div.content').children().html();
+    var emptyTemp = "";
+    generateMain();
+    
+});
+
+
+var emptyContent = function() {
+    emptyTemp = $('body div.content').html();
+    $('body div.content').children().remove();
+}
+
+var retreiveContent = function() {
+    $('body div.content').append(emptyTemp);
+}
+
+var hideItems = function() {
+    $('.row').hide();
+}
+
+var hideJumbotron = function() {
+    $('.jumbotron').hide();
+}
+
+var generateMain = function() {
     $.ajax({
         url: "http://content.guardianapis.com/search",
         type: "GET",
@@ -29,5 +54,5 @@ $(document).ready(function() {
             console.dir(xhr);
         },
     });
-}, false);
+}
 
