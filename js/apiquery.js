@@ -19,18 +19,34 @@ $(document).ready(function() {
 
                 // Content display part
                 // Display content
+                var currentNewsItem = $('div.news-item').first();
+                var counter = 1;
+                while (counter < 10) {
+                    // Render article
+                    currentNewsItem.find('h3.news-item-font').append(json.response.results[counter].webTitle);
+                    currentNewsItem.find('p.news-snippet').append(json.response.results[counter].fields.standfirst);
+                    currentNewsItem = currentNewsItem.next();
+                    counter++;
 
-                for (i = 1; i <= 10; i++) {   
-                    $('.news').append('<div class="news-item"><h3 class="news-item-font">' + json.response.results[i].webTitle + '</h3><p>' + json.response.results[i].fields.standfirst + '</p><p class="push-top push-bottom"><a class="btn btn-default" id="unique-id" role="button">View details &raquo;</a></p></div>');
+                    // Cache article
+                    var articleObject = {};
+                    articleObject["title"] = json.response.results[0].webTitle;
+                    articleObject["body"] = json.response.results[0].fields.body;
+                    articleCache.push(articleObject);
                 }
-                console.log(newsItems);
+                
+                // When read more clicked
+                $('.news-item a.btn, .jumbotron .btn').click(function() {
+                    var articleNumber = $(this).attr('id');
+                    articleNumber = parseInt(articleNumber[articleNumber.length -1]);
+                    console.log(articleNumber);
+                    readMore(articleNumber);
+                });
 
-                // Query for first 10 entries
-                for (i = 1; i < 10; i++) {
-                    $('.content').append('<h2>' + json.response.results[i].webTitle + '</h2>');
-                    $('.content').append('<p class="snippet">' + json.response.results[i].fields.standfirst + '</p>');
-                }
-
+                // Returns to home page
+                $('.back-button').click(function() {
+                    backHome();
+                });
             },
             error: function(xhr, status, errorThrown) {
                 alert("Sorry, there was a problem!");
@@ -41,41 +57,21 @@ $(document).ready(function() {
         });
     }
 
-    var showArticle = function(articleNumber) {
-    $('body div.content').append('<h1 class="jumbotron-headline">' + articleCache[articleNumber].title + '</h1>');
-    $('body div.content').append(articleCache[articleNumber].body);
+    // Hides main page and shows "Read more" container
+    function readMore(index) {
+        $('#read-more h1').append(articleCache[index].title);
+        $('#read-more #read-more-content').append(articleCache[index].body);
+        $('.content').hide();
+        $('#read-more').show();
     }
 
-    var emptyContent = function() {
-        emptyTemp = $('body div.content').html();
-        $('body div.content').children().remove();
+    function backHome() {
+        $('.content').show();
+        $('#read-more').hide();
+        $('#read-more h1, #read-more-content').empty();
     }
 
-    var retreiveContent = function() {
-        $('body div.content').append(emptyTemp);
-    }
-
-    var hideItems = function() {
-        $('.row').hide();
-    }
-
-    var hideJumbotron = function() {
-        $('.jumbotron').hide();
-    }
-
-
-    generateMain();
-
-    $('.jumbotron .btn').click(function() {
-        emptyContent();
-        showArticle(0);
-
-    });
-
-    
-
-    
-    
+    generateMain(); 
 });
 
 
