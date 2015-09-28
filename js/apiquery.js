@@ -38,8 +38,11 @@ $(document).ready(function() {
     }
 
 
-// Functions to go here
 
+
+    generateMain();
+  
+    
 });
 
 
