@@ -4,6 +4,10 @@
   }
 }
 
+p {
+    text-align: justify;
+}
+
 body div div .jumbotron-headline {
     font-size: 2.8em;
 }
