@@ -13,6 +13,7 @@
         <!-- AngularJS libraries -->
         <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
         <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-sanitize.js"></script
     </head>
     <body ng-app="NewsApp">
         <div class="container">
@@ -20,11 +21,6 @@
               <h1 class="header-font">The Guardian <small>Technology</small></h1>
             </div>
             <div class ="content">
-              <div class="jumbotron">
-                <h1 id="latest-headline" class="jumbotron-headline"></h1>
-                <p id="latest-snippet" class="latest-snippet-text"></p>
-                <p class="push-top"><a class="btn btn-primary btn-lg" id="button-0" role="button">Read more</a></p>
-              </div>
               <div class="row">
                 <div class="content">
 
@@ -41,18 +37,7 @@
                 </div>
               </div>
             </div>
-            <div id="read-more">
-              <!-- Articles after clicking "Read more" go here -->
-              <h1 class="jumbotron-headline"></h1>
-              <p class="push-top push-bottom">
-                <a class="btn btn-default back-button" role="button" href="#top">&laquo; Back</a>
-              </p>
-              <div id="read-more-content">
-              </div>
-              <p class="push-top push-bottom">
-                <a class="btn btn-default back-button" role="button" href="#top">&laquo; Back</a>
-              </p>
-            </div>
+
             <div id="footer">
               <p>The Guardian - Technology</p>
             </div>
@@ -62,7 +47,7 @@
 
         <!-- Controllers -->
         <script src="js/controllers/HomeController.js"></script>
-        <!-- IMPLEMENT NEWS CONTROLLER -->
+        <script src="js/controllers/NewsController.js"></script>
 
         <!-- Services -->
         <script src="js/services/news.js"
