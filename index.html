@@ -10,9 +10,11 @@
         <style type="text/css">
           h1 {font-size: 15px;}
         </style>
-        
+        <!-- AngularJS libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+        <script src="https://code.angularjs.org/1.2.28/angular-route.min.js"></script>
     </head>
-    <body>
+    <body ng-app="NewsApp">
         <div class="container">
             <div class="page-header">
               <h1 class="header-font">The Guardian <small>Technology</small></h1>
@@ -25,64 +27,10 @@
               </div>
               <div class="row">
                 <div class="content">
-                  <div class="col-md-9 col-sm-12">
-                    <div class="news">
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-1" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-2" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-3" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-4" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-5" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-6" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-7" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-8" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                      <div class="news-item">
-                        <h3 class="news-item-font"></h3>
-                        <p class="news-snippet"></p>
-                        <p class="push-top push-bottom"><a class="btn btn-default" id="button-9" role="button" href="#top">View details &raquo;</a>
-                        </p>
-                      </div>
-                    </div>
-                  </div>
+
+                <!-- Load AngularJS View -->
+                <div ng-view></div>
+
                   <div class="right-column">
                     <div class="hidden-xs">
                       <div class="col-md-3">
@@ -109,7 +57,19 @@
               <p>The Guardian - Technology</p>
             </div>
         </div>
+        <!-- Modules -->
+        <script src="js/app.js"></script>
+
+        <!-- Controllers -->
+        <script src="js/controllers/HomeController.js"></script>
+        <!-- IMPLEMENT NEWS CONTROLLER -->
+
+        <!-- Services -->
+        <script src="js/services/news.js"
+
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="js/apiquery.js"></script>
+       <!-- <script src="js/apiquery.js"></script> -->
+
+
     </body>
 </html>

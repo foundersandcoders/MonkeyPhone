@@ -1,0 +1,10 @@
+<div class="col-md-9 col-sm-12">
+	<div class="news">
+		<div ng-repeat="news in news.response.results" class="news-item">
+			<h3 class="news-item-font">{{ news.webTitle }}</h3>
+			<p class="news-snippet">{{ news.fields.standFirst }}</p>
+			<p class="push-top push-bottom"><a class="btn btn-default" role="button">View details &raquo;</a>
+			</p>
+		</div>
+	</div>
+</div>
