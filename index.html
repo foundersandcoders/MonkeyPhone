@@ -7,9 +7,6 @@
         <title>An API request</title>
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet"> 
-        <style type="text/css">
-          h1 {font-size: 15px;}
-        </style>
         
     </head>
     <body>
@@ -17,26 +14,35 @@
             <div class="page-header">
               <h1 class="header-font">The Guardian <small>Technology</small></h1>
             </div>
-            <div class="jumbotron">
-              <h1 id="latest-headline" class="jumbotron-headline"></h1>
-              <p id="latest-snippet" class="latest-snippet-text"></p>
-              <p class="push-top"><a class="btn btn-primary btn-lg" href="#" role="button">Read more</a></p>
-            </div>
-            <div class="row">
-              <div class="content">
-                <div class="col-md-9 col-sm-12">
-                  <div class="news">
-                    <!-- News items here -->
+            <div class ="content">
+              <div class="row">
+                <div class="content">
+                  <div class="col-md-9 col-sm-12">
+                    <div class="news">
+                      <!-- News Snippets rendered here -->
+                    </div>
+                  </div>
+                  <div class="right-column">
+                    <div class="hidden-xs">
+                      <div class="col-md-3">
+                        <img src="img/right-column.jpg" />
+                      </div>
+                  </div>
                   </div>
                 </div>
-                <div class="right-column">
-                  <div class="hidden-xs">
-                    <div class="col-md-3">
-                      <img src="img/right-column.jpg" />
-                    </div>
-                </div>
-                </div>
               </div>
+            </div>
+            <div id="read-more">
+              <!-- Articles after clicking "Read more" go here -->
+              <h1 class="jumbotron-headline"></h1>
+              <p class="push-top push-bottom">
+                <a class="btn btn-default back-button" role="button" href="#top">&laquo; Back</a>
+              </p>
+              <div id="read-more-content">
+              </div>
+              <p class="push-top push-bottom">
+                <a class="btn btn-default back-button" role="button" href="#top">&laquo; Back</a>
+              </p>
             </div>
             <div id="footer">
               <p>The Guardian - Technology</p>
