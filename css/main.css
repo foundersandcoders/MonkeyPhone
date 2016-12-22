@@ -1,12 +1,10 @@
 @media (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
+    .container {
+        max-width: 730px;
+    }
 }
 
-body {
-
-}
+body {}
 
 body div div .jumbotron-headline {
     font-size: 2.8em;
@@ -18,10 +16,19 @@ body div div .latest-snippet-text {
 
 .news-item-font {
     font-size: 1.5em;
+    font-weight: bolder;
 }
 
 .header-font {
     font-size: 1.8em;
+}
+
+.jumbotron {
+    border-radius: 0 !important;
+}
+
+.jumbotron p {
+    color: peru;
 }
 
 .push-top {
@@ -33,8 +40,8 @@ body div div .latest-snippet-text {
 }
 
 #footer {
-    border-top:1px solid #eee;
-    margin-top:15px;
+    border-top: 1px solid #eee;
+    margin-top: 15px;
 }
 
 #footer p {
